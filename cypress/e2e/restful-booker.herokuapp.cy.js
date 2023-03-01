@@ -31,6 +31,20 @@ describe('Exmaple API tests using cypress-plugin-api', () => {
       }
     }).then((response) => {
       expect(response.status).to.equal(200);
+      expect(response.body).to.have.property('bookingid');
+      expect(response.body.bookingid).to.be.a('number');
+      expect(response.body).to.have.property('booking');
+      expect(response.body.booking.firstname).to.equal(FIRST_NAME);
+      expect(response.body.booking.lastname).to.equal(LAST_NAME);
+      expect(response.body.booking.totalprice).to.equal(TOTAL_PRICE);
+      expect(response.body.booking.depositpaid).to.be.true;
+      expect(response.body.booking.bookingdates.checkin).to.equal(DATE);
+      expect(response.body.booking.bookingdates.checkout).to.equal(DATE);
+      expect(response.body.booking.additionalneeds).to.equal(ADDITIONAL_NEEDS);
     })
+  })
+
+  it('should return a booking id', () => {
+    //TODO
   })
 })
