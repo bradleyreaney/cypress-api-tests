@@ -15,8 +15,7 @@ This repo gives examples of the following features
 
 ## Pre-requisites
 
-You will need to create a `cypress.env.json` file.
-It will need the following information...
+You will need to create a `cypress.env.json` file that contains the following information...
 ```
 {
     "apiUsername: "",
