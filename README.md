@@ -1,7 +1,8 @@
 # Cypress API Tests
 
 An example of the Cypress api plugin created by Filip Hric.
-The plugin shows your API information in the Cypress UI runner.
+
+The plugin shows the API information in the Cypress UI runner.
 
 The demo will use the API restful-booker - https://restful-booker.herokuapp.com/apidoc/index.html
 
