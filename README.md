@@ -26,7 +26,7 @@ The credentials for the API can be found here - https://restful-booker.herokuapp
 
 After this run `npm i` to install all dependencies.
 
-## How to run
+## How to run the Cypress tests
 
 1. Run the command `npx cypress open` to open the Cypress runner UI.
 2. Select `E2E Testing` then `Start E2E Testing in Chrome`
