@@ -5,10 +5,10 @@ const TOTAL_PRICE = 111;
 const DEPOSIT_PAID = true;
 const DATE = '2023-02-27';
 const ADDITIONAL_NEEDS = 'Breakfast';
-let BOOKING_ID = null;
-let TOKEN = null;
+let BOOKING_ID: number = null;
+let TOKEN: string = null;
 
-describe('Exmaple API tests using cypress-plugin-api', () => {
+describe('Example API tests using cypress-plugin-api', () => {
   
 	it('should perform a health check', () => {
 		cy.api('/ping').then((response) => {
