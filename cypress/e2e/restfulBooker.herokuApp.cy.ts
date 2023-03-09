@@ -9,7 +9,7 @@ let BOOKING_ID: number = null;
 let TOKEN: string = null;
 
 describe('Example API tests using cypress-plugin-api', () => {
-  
+
 	it('should perform a health check', () => {
 		cy.api('/ping').then((response) => {
 			expect(response.status).to.equal(201);
@@ -66,8 +66,19 @@ describe('Example API tests using cypress-plugin-api', () => {
 		});
 	});
 
-	it('should create a token and update a booking', { env: { hideCredentials: true} }, () => {
-		cy.api('POST', '/auth', {'username': `${Cypress.env('apiUsername')}`, 'password': `${Cypress.env('apiPassword')}`}).then((response) => {
+	it('should create a token and update a booking', {
+		env: {
+			hideCredentials: true
+		}
+	}, () => {
+		cy.api({
+			method: 'POST',
+			url: '/auth',
+			body: {
+				'username': `${Cypress.env('apiUsername')}`,
+				'password': `${Cypress.env('apiPassword')}`
+			}
+		}).then((response) => {
 			expect(response.body).to.have.property('token');
 			TOKEN = response.body.token;
 			cy.api({
@@ -91,7 +102,11 @@ describe('Example API tests using cypress-plugin-api', () => {
 		});
 	});
 
-	it('should delete a booking', { env: { hideCredentials: true } }, () => {
+	it('should delete a booking', {
+		env: {
+			hideCredentials: true
+		}
+	}, () => {
 		cy.api({
 			method: 'DELETE',
 			url: `/booking/${BOOKING_ID}`,
