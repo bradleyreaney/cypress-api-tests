@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "cypress.config.js",
   "scripts": {
-    "open": "npx cypress open",
-    "run": "npx cypress run"
+    "start": "npx cypress open",
+    "test": "npx cypress run"
   },
   "repository": {
     "type": "git",
