@@ -31,5 +31,5 @@ After this run `npm i` to install all dependencies.
 1. Run the command `npx cypress open` to open the Cypress runner UI.
 2. Select `E2E Testing` then `Start E2E Testing in Chrome`
 3. From here you'll have two options
-    a. The `nonPlugin-restfulBooker.herokuApp.cy.js` spec which is a standard `cy.request()` method
-    b. The `lugin-restfulBooker.herokuApp.cy.js` spec which uses the `cy.api()` method and `hideCredentials` feature
+    - The `nonPlugin-restfulBooker.herokuApp.cy.js` spec which is a standard `cy.request()` method
+    - The `lugin-restfulBooker.herokuApp.cy.js` spec which uses the `cy.api()` method and `hideCredentials` feature
